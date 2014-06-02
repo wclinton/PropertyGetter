@@ -70,6 +70,18 @@
     <Reference Include="Sage.Cloud.Domain.Customers.Interfaces">
       <HintPath>Libraries\Sage.Cloud.Domain.Customers.Interfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Sage.Cloud.Domain.Invoices">
+      <HintPath>Libraries\Sage.Cloud.Domain.Invoices.dll</HintPath>
+    </Reference>
+    <Reference Include="Sage.Cloud.Domain.Invoices.Interfaces">
+      <HintPath>Libraries\Sage.Cloud.Domain.Invoices.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Sage.Cloud.Domain.Statements">
+      <HintPath>Libraries\Sage.Cloud.Domain.Statements.dll</HintPath>
+    </Reference>
+    <Reference Include="Sage.Cloud.Domain.Statements.Interfaces">
+      <HintPath>Libraries\Sage.Cloud.Domain.Statements.Interfaces.dll</HintPath>
+    </Reference>
     <Reference Include="Sage.Cloud.Platform.Data.Table">
       <HintPath>Libraries\Sage.Cloud.Platform.Data.Table.dll</HintPath>
     </Reference>
@@ -90,9 +102,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base.cs" />
+    <Compile Include="ClassInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sbp.cs" />
+    <Compile Include="Invoice.cs" />
+    <Compile Include="Statement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
