@@ -6,7 +6,7 @@ namespace PropertyGettter
     class Invoice : Base
     {
 
-        public void Do()
+        public static void Do()
         {
             var list = new[]
             {
@@ -14,7 +14,7 @@ namespace PropertyGettter
                 new ClassInfo("Invoice('{Id}')/InvoiceDetail",NonModifyable()), 
                 new ClassInfo("PurchaseHistoryByCustomer",NonModifyable()),                 
                 new ClassInfo("PurchaseHistoryItem",NonModifyable()), 
-                new ClassInfo("PurchaseHistoryQuantity",NonModifyable()),                                              
+                new ClassInfo("PurchaseHistoryQuantity",NonModifyable())                                            
             };
 
             using (var file = new StreamWriter(@"InvoiceApi.txt"))
@@ -30,7 +30,7 @@ namespace PropertyGettter
                 
                 //PurchaseHistory
                 typeof (PurchaseHistoryByCustomer), typeof (PurchaseHistoryItem),
-                typeof (PurchaseHistoryQuantity),            
+                typeof (PurchaseHistoryQuantity)          
             };
 
             using (var file = new StreamWriter(@"Invoice.txt"))

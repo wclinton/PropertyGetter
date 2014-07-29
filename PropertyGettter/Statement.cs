@@ -6,13 +6,13 @@ namespace PropertyGettter
 {
     public class Statement:Base
     {
-        public void Do()
+        public static void Do()
         {
             var list = new[]
             {
                 new ClassInfo("Statement",NonModifyable()), 
                 new ClassInfo("Statement('{Id}')/StatementDetail",NonModifyable()), 
-                new ClassInfo("UnprocessedStatement"),                                                                             
+                new ClassInfo("UnprocessedStatement")                                                                          
             };
 
             using (var file = new StreamWriter(@"StatementApi.txt"))
@@ -24,7 +24,7 @@ namespace PropertyGettter
                 {                 
                   typeof(Sage.Cloud.Domain.Statements.Interfaces.Models.Statement),
                   typeof(StatementDetail),                  
-                  typeof(UnprocessedStatement),
+                  typeof(UnprocessedStatement)
                 };
 
             using (var file = new StreamWriter(@"statement.txt"))
